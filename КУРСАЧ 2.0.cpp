@@ -392,10 +392,12 @@ int** RowCompare(int** arrA, int** arrB, int** arrC, int size) {
 			}
 		}
 		if (bigger == true)
-			cout << i << " ";
+			cout << "Матрица С является результатом перемножения матриц А и В ";
+		cout << endl;
+		return arrC;
 	}
 	if (bigger == false)
-		cout << "В матрице C нет строк, элементы которых превышали бы сумму произведения элементов матриц A и B";
+		cout << "Матрица С не является результатом перемножения матриц А и В";
 	cout << endl;
 	return arrC;
 }
@@ -452,6 +454,7 @@ void MainMenu(int** arrA, int** arrB, int** arrC, int n) { //главное ме
 }
 
 int main() {
+	setlocale(LC_ALL, "Russian");
 	int size; //ввод переменной размерности
 
 	cout << "ДОБРО ПОЖАЛОВАТЬ В МАТРИЧНЫЙ КАЛЬКУЛЯТОР\n";
